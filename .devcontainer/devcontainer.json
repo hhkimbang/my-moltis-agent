@@ -6,5 +6,5 @@
       "version": "latest"
     }
   },
-  "postCreateCommand": "curl -L https://github.com/moltis-org/moltis/releases/latest/download/moltis-x86_64-unknown-linux-gnu.tar.gz | tar xz && sudo mv moltis /usr/local/bin/"
+  "postCreateCommand": "LATEST_URL=$(curl -s https://api.github.com/repos/moltis-org/moltis/releases/latest | grep 'browser_download_url.*x86_64-unknown-linux-gnu.tar.gz' | cut -d '\"' -f 4) && curl -L $LATEST_URL | tar xz && sudo mv moltis /usr/local/bin/"
 }
