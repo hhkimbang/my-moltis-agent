@@ -1,0 +1,10 @@
+{
+  "name": "Moltis AI Agent",
+  "image": "mcr.microsoft.com/devcontainers/rust:1",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "curl -L https://github.com/moltis-org/moltis/releases/latest/download/moltis-x86_64-unknown-linux-gnu.tar.gz | tar xz && sudo mv moltis /usr/local/bin/"
+}
