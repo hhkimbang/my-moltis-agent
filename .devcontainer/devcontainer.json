@@ -1,6 +1,6 @@
 {
   "name": "Moltis AI Agent",
-  "image": "mcr.microsoft.com/devcontainers/rust:1",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {
       "version": "latest"
